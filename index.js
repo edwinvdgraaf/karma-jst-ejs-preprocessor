@@ -18,8 +18,9 @@ var createJstEjsPreprocessor = function(args, config, logger, helper) {
   // Removes base and sprockets untill sprockets mountPath with options.logicalPathStrip
   var transformLogicalPath = function(filepath) {
     var logicalPath = filepath.replace(/\.jst.ejs$/, '');
-    
-    return logicalPath;
+    // Poor mans solutions here, it somewhat more complex
+
+    return logicalPath.substring(logicalPath.indexOf(options.logicalMountPoint));
   };
 
   // Internal (private) namespace storage
