@@ -26,8 +26,6 @@ var createJstEjsPreprocessor = function(args, config, logger, helper) {
   var namespace = 'this.JST';
 
   var makeJST = function (data, file) {
-    log.debug(file)
-
     return "(function () { " +
       namespace + " || (" + namespace + " = {}); " +
       namespace + "[" + JSON.stringify(file.logicalPath) + "] = " +
@@ -43,10 +41,8 @@ var createJstEjsPreprocessor = function(args, config, logger, helper) {
     file.logicalPath = transformLogicalPath(file.originalPath);
 
     try {
-      log.debug(content);
       result = ejs.compile(content, {client: true}).toString();
       result = makeJST(result, file);
-      log.debug(result);
     } catch (e) {
       log.error('%s\n  at %s', e.message, file.originalPath);
       return;
