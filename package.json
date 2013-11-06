@@ -14,11 +14,5 @@
     "jst"
   ],
   "author": "Edwin van der Graaf",
-  "license": "MIT",
-  "devDependencies": {
-    "ejs": "~0.8.4"
-  },
-  "dependencies": {
-    "ejs": "~0.8.4"
-  }
+  "license": "MIT"
 }

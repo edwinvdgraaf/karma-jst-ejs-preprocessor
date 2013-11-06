@@ -34,14 +34,14 @@ var createJstEjsPreprocessor = function(args, config, logger, helper) {
   };
 
   return function(content, file, done) {
-    var result = null;
+    var result = "";
 
     log.debug('Processing "%s".', file.originalPath);
     file.path = transformPath(file.originalPath);
     file.logicalPath = transformLogicalPath(file.originalPath);
 
     try {
-      result = ejs.compile(content, {client: true}).toString();
+      result = helper._.template(content).source;
       result = makeJST(result, file);
     } catch (e) {
       log.error('%s\n  at %s', e.message, file.originalPath);
