@@ -1,0 +1,21 @@
+{
+  "name": "karma-jst-ejs",
+  "version": "0.1.0",
+  "description": "Template replacement when working with JST & EJS (as in Sprockets)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "karma",
+    "testing",
+    "ejs",
+    "jst"
+  ],
+  "author": "Edwin van der Graaf",
+  "license": "MIT",
+  "devDependencies": {
+    "ejs": "~0.8.4"
+  }
+}
