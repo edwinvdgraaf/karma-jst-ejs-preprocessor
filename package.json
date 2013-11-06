@@ -1,5 +1,5 @@
 {
-  "name": "karma-jst-ejs",
+  "name": "karma-jst-ejs-preprocessor",
   "version": "0.1.0",
   "description": "Template replacement when working with JST & EJS (as in Sprockets)",
   "main": "index.js",
